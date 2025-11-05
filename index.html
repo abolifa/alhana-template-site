@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Discover the world with Alhana Palace — unforgettable journeys, exceptional service."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://alhana.eratech.com.ly/" />
+    <meta
+      property="og:title"
+      content="Alhana Palace for Tourism & Financial Investment"
+    />
+    <meta
+      property="og:description"
+      content="Discover the world with Alhana Palace — unforgettable journeys, exceptional service."
+    />
+    <meta property="og:image" content="/og-image.png" />
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:image" content="/og-image.png" />
+    <meta property="twitter:title" content="Alhana Palace" />
+    <meta
+      property="twitter:description"
+      content="Unforgettable journeys, exceptional service."
+    />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Tajawal:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alhana Palace | For Travel & Financial Investment</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      (function () {
+        const storageKey = "vite-ui-theme";
+        const storedTheme = localStorage.getItem(storageKey);
+
+        const systemPrefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches;
+        const theme =
+          storedTheme === "dark" || (!storedTheme && systemPrefersDark)
+            ? "dark"
+            : "light";
+
+        document.documentElement.classList.add(theme);
+      })();
+    </script>
+  </body>
+</html>

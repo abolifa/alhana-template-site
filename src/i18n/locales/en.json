@@ -1,0 +1,120 @@
+{
+  "hero_title": "Alhana Palace for Tourism & Financial Investment.",
+  "hero_subtitle": "Discover the world with us. Unforgettable journeys, exceptional service.",
+  "explore_now": "Explore Now",
+  "services": {
+    "view_more": "View More",
+    "hide_details": "Hide Details",
+    "visa_assistance": {
+      "title": "Visa Assistance",
+      "description": "Comprehensive support for obtaining travel visas.",
+      "details_title": "Our Visa Services",
+      "details": [
+        "European Schengen Visas",
+        "Gulf Cooperation Council",
+        "Middle East & North Africa",
+        "Asia & Far East",
+        "North America",
+        "United Kingdom",
+        "Africa",
+        "Latin America"
+      ]
+    },
+
+    "flight_booking": {
+      "title": "Flight Booking",
+      "description": "Affordable and convenient flight options worldwide.",
+      "details_title": "Our Partner Airlines",
+      "details": [
+        "Afriqiyah Airways",
+        "Libyan Airlines",
+        "Libyan Wings",
+        "Berniq Airways",
+        "Crown Airlines",
+        "Buraq Air",
+        "Egypt Air",
+        "Tunis Air",
+        "Turkish Airlines",
+        "Air Libya"
+      ]
+    },
+
+    "financial_services": {
+      "title": "Financial Services",
+      "description": "Currency exchange and travel insurance solutions.",
+      "details_title": "Our Financial Solutions",
+      "details": ["Travel Insurance", "Currency Exchange"]
+    },
+
+    "study_programs": {
+      "title": "Study Programs",
+      "description": "Comprehensive guidance for international studies.",
+      "details_title": "Available Programs",
+      "details": [
+        "Language Diplomas",
+        "Bachelor's Programs",
+        "Master's Programs",
+        "PhD Programs"
+      ]
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "company_name": "Alhana Palace for Tourism & Financial Investment",
+    "address": "Dahra, Sidi Ben Imam Street, behind the Italian Embassy",
+    "phone": "+218 92 681 1102",
+    "email": "info@alhana.com.ly",
+    "map_title": "Alhana Location",
+
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "sending": "Sending...",
+      "sent": "Message Sent ✓",
+      "error": "Error! Try Again"
+    }
+  },
+  "partnership": {
+    "title": "Accredited By",
+    "lycca": "Libyan Civil Aviation Authority",
+    "ministry": "Ministry of Tourism",
+    "chamber": "Western Region Tourism Chamber",
+    "insurance": "Global Insurance Company"
+  },
+  "footer": {
+    "description": "Alhana Palace for Tourism & Financial Investment.",
+    "quick_links": "Quick Links",
+    "links": {
+      "about": "About Us",
+      "services": "Services",
+      "gallery": "Gallery",
+      "contact": "Contact"
+    },
+    "contact_title": "Contact Info",
+    "address": "Dahra, Sidi Ben Imam Street, behind the Italian Embassy",
+    "phone": "+218 92 681 1102",
+    "email": "info@alhana.com.ly",
+    "subscribe_title": "Subscribe to our Newsletter",
+    "subscribe_desc": "Be the first to know about our offers and products.",
+    "subscribe_placeholder": "Enter your email",
+    "subscribe_button": "Subscribe",
+    "subscribed": "Email {{email}} subscribed successfully!",
+    "copyright": "Alhana Palace for Tourism & Financial Investment — All Rights Reserved."
+  },
+  "about_us": "About Us",
+  "about_description": "We are Alhana Palace for Tourism and Financial Investment, aspecialized company in organizing tourism trips and providing comprehensive investment services within the tourism sector. Ourgoal is to deliver exceptional travel experiences that combine comfort, luxury, and precision in execution. We believe that every journey should become an unforgettable memory — which is why we meticulously design our travel programs to meet our clients’ expectations and cater to the finest details.",
+  "learn_more": "Learn More",
+  "years_of_experience": "Years of Experience",
+  "global_partners": "Global Partners",
+  "satisfied_clients": "Satisfied Clients",
+  "destinations": "Destinations",
+  "our_gallery": "Our Gallery",
+  "home_nav": "Home",
+  "about_nav": "About Us",
+  "services_nav": "Services",
+  "blog_nav": "Blog",
+  "contact_nav": "Contact"
+}
