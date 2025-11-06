@@ -114,7 +114,11 @@ const Footer = () => {
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-amber-500" />
-              <a href="tel:+218926811102" className="hover:text-amber-500">
+              <a
+                href="tel:+218926811102"
+                className="hover:text-amber-500"
+                dir="ltr"
+              >
                 {t("footer.phone")}
               </a>
             </li>

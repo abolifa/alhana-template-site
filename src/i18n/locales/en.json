@@ -17,7 +17,8 @@
         "North America",
         "United Kingdom",
         "Africa",
-        "Latin America"
+        "Latin America",
+        "Libyan Visa & Residency"
       ]
     },
 
@@ -61,7 +62,7 @@
   "contact": {
     "title": "Contact Us",
     "company_name": "Alhana Palace for Tourism & Financial Investment",
-    "address": "Dahra, Sidi Ben Imam Street, behind the Italian Embassy",
+    "address": "Al Dahra, Sidi Ben Imam Street, behind the Italian Embassy",
     "phone": "+218 92 681 1102",
     "email": "info@alhana.com.ly",
     "map_title": "Alhana Location",
@@ -94,7 +95,7 @@
       "contact": "Contact"
     },
     "contact_title": "Contact Info",
-    "address": "Dahra, Sidi Ben Imam Street, behind the Italian Embassy",
+    "address": "Al Dahra, Sidi Ben Imam Street, behind the Italian Embassy",
     "phone": "+218 92 681 1102",
     "email": "info@alhana.com.ly",
     "subscribe_title": "Subscribe to our Newsletter",

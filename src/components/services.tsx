@@ -37,6 +37,10 @@ const Services = () => {
         },
         { flag: "/flags/7.png", name: t("services.visa_assistance.details.6") },
         { flag: "/flags/8.png", name: t("services.visa_assistance.details.7") },
+        {
+          flag: "/flags/11.webp",
+          name: t("services.visa_assistance.details.8"),
+        },
       ],
     },
     {
@@ -149,60 +153,93 @@ const Services = () => {
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
         >
           {services.map((service, index) => (
-            <motion.div
-              key={index}
-              layout
-              onClick={() =>
-                setActiveIndex(activeIndex === index ? null : index)
-              }
-              className={`cursor-pointer bg-sidebar border border-border rounded-2xl p-8 text-center shadow-xl transition-all hover:shadow-2xl ${
-                activeIndex === index ? "ring-2 ring-amber-500" : ""
-              }`}
-            >
-              <service.icon className="text-5xl text-amber-500 mb-4 mx-auto" />
-              <h3 className="text-2xl font-semibold text-foreground">
-                {service.title}
-              </h3>
-              <p className="mt-3 text-muted-foreground">
-                {service.description}
-              </p>
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                className="mt-6 px-6 py-2 bg-amber-500 text-white font-medium rounded-full hover:bg-amber-600 transition"
+            <motion.div key={index} layout>
+              {/* Card */}
+              <div
+                onClick={() =>
+                  setActiveIndex(activeIndex === index ? null : index)
+                }
+                className={`cursor-pointer bg-sidebar border border-border rounded-2xl p-8 text-center shadow-xl transition-all hover:shadow-2xl ${
+                  activeIndex === index ? "ring-2 ring-amber-500" : ""
+                }`}
               >
-                {activeIndex === index
-                  ? t("services.hide_details")
-                  : t("services.view_more")}
-              </motion.button>
+                <service.icon className="text-5xl text-amber-500 mb-4 mx-auto" />
+                <h3 className="text-2xl font-semibold text-foreground">
+                  {service.title}
+                </h3>
+                <p className="mt-3 text-muted-foreground">
+                  {service.description}
+                </p>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  className="mt-6 px-6 py-2 bg-amber-500 text-white font-medium rounded-full hover:bg-amber-600 transition"
+                >
+                  {activeIndex === index
+                    ? t("services.hide_details")
+                    : t("services.view_more")}
+                </motion.button>
+              </div>
+
+              {/* Mobile detail block */}
+              <div className="block lg:hidden">
+                {activeIndex === index && (
+                  <motion.div
+                    key={`details-${index}`}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="w-full mt-4 bg-muted/10 border border-border rounded-2xl p-6 shadow-inner"
+                  >
+                    <h4 className="text-xl font-bold text-amber-500 mb-4 text-center">
+                      {service.detailsTitle}
+                    </h4>
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                      {service.details.map((item, i) => (
+                        <motion.div
+                          key={i}
+                          initial={{ opacity: 0, y: 10 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          transition={{ delay: i * 0.05 }}
+                          className="flex flex-col items-center justify-center bg-background border border-border rounded-xl p-3 hover:bg-muted/30 transition"
+                        >
+                          <img
+                            src={item.flag}
+                            alt={item.name}
+                            className="object-contain w-20 h-20"
+                          />
+                          <span className="mt-2 text-sm font-medium text-foreground">
+                            {item.name}
+                          </span>
+                        </motion.div>
+                      ))}
+                    </div>
+                  </motion.div>
+                )}
+              </div>
             </motion.div>
           ))}
         </motion.div>
 
-        {/* Persistent detail area */}
+        {/* Desktop persistent area */}
         <motion.div
           layout
+          className="hidden lg:block overflow-hidden transition-all"
           animate={{
             height: activeIndex !== null ? "auto" : 0,
             opacity: activeIndex !== null ? 1 : 0,
           }}
           transition={{ duration: 0.5, ease: "easeInOut" }}
-          className={`overflow-hidden transition-all ${
-            activeIndex === null ? "pointer-events-none" : "mt-10"
-          }`}
         >
           {activeIndex !== null && (
             <motion.div
-              key={`details-${activeIndex}`}
+              key={`details-desktop-${activeIndex}`}
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              className="bg-muted/10 border border-border rounded-2xl p-8 shadow-inner"
+              className="mt-10 bg-muted/10 border border-border rounded-2xl p-8 shadow-inner"
             >
               <h4 className="text-2xl font-bold text-amber-500 mb-6 text-center">
                 {services[activeIndex].detailsTitle}
               </h4>
-
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
                 {services[activeIndex].details.map((item, i) => (
                   <motion.div
@@ -212,13 +249,11 @@ const Services = () => {
                     transition={{ delay: i * 0.05, duration: 0.3 }}
                     className="flex flex-col items-center justify-center bg-background border border-border rounded-xl p-4 hover:bg-muted/30 transition"
                   >
-                    <div className="p-2 bg-secondary dark:bg-secondary-foreground rounded w-28 h-22 flex items-center justify-center shadow-md">
-                      <img
-                        src={item.flag}
-                        alt={item.name}
-                        className="object-contain w-full h-full"
-                      />
-                    </div>
+                    <img
+                      src={item.flag}
+                      alt={item.name}
+                      className="object-contain w-full h-20"
+                    />
                     <span className="mt-3 text-sm text-foreground font-medium">
                       {item.name}
                     </span>

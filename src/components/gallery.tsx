@@ -1,6 +1,8 @@
 "use client";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
   "/gallery/2.jpg",
@@ -15,6 +17,20 @@ const images = [
 
 const Gallery = () => {
   const { t } = useTranslation();
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+
+  const close = () => setActiveIndex(null);
+
+  const next = () => {
+    if (activeIndex === null) return;
+    setActiveIndex((prev) => (prev! + 1) % images.length);
+  };
+
+  const prev = () => {
+    if (activeIndex === null) return;
+    setActiveIndex((prev) => (prev! - 1 + images.length) % images.length);
+  };
+
   return (
     <section
       id="gallery"
@@ -31,6 +47,8 @@ const Gallery = () => {
         >
           {t("our_gallery")}
         </motion.h2>
+
+        {/* Grid */}
         <div className="grid grid-cols-4 grid-rows-2 gap-3 rounded-3xl overflow-hidden aspect-video">
           {images.map((src, i) => {
             const layout = [
@@ -51,7 +69,8 @@ const Gallery = () => {
                 whileInView={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5, delay: i * 0.05 }}
                 viewport={{ once: true }}
-                className={`relative overflow-hidden ${layout[i]} group`}
+                onClick={() => setActiveIndex(i)}
+                className={`relative overflow-hidden ${layout[i]} group cursor-pointer`}
               >
                 <img
                   src={src}
@@ -64,6 +83,59 @@ const Gallery = () => {
           })}
         </div>
       </div>
+
+      {/* Lightbox / Full Preview */}
+      <AnimatePresence>
+        {activeIndex !== null && (
+          <motion.div
+            key="lightbox"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+          >
+            <button
+              onClick={close}
+              className="absolute top-5 right-5 text-white/80 hover:text-white"
+            >
+              <X className="w-7 h-7" />
+            </button>
+
+            {/* Prev / Next Buttons */}
+            <button
+              onClick={prev}
+              className="absolute left-4 md:left-10 text-white/70 hover:text-white"
+            >
+              <ChevronLeft className="w-10 h-10" />
+            </button>
+            <button
+              onClick={next}
+              className="absolute right-4 md:right-10 text-white/70 hover:text-white"
+            >
+              <ChevronRight className="w-10 h-10" />
+            </button>
+
+            {/* Image with swipe */}
+            <motion.img
+              key={activeIndex}
+              src={images[activeIndex]}
+              alt={`Gallery full ${activeIndex + 1}`}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.4 }}
+              drag="x"
+              dragConstraints={{ left: 0, right: 0 }}
+              onDragEnd={(_, info) => {
+                if (info.offset.x < -100) next();
+                else if (info.offset.x > 100) prev();
+              }}
+              className="max-h-[90vh] max-w-[90vw] object-contain select-none rounded-lg shadow-2xl"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 };

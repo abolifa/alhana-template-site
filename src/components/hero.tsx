@@ -1,5 +1,5 @@
-"use client";
 import { motion, AnimatePresence } from "framer-motion";
+import i18next from "i18next";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
@@ -12,6 +12,8 @@ const mediaSequence = [
 const Hero = () => {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
+  const [typedText, setTypedText] = useState("");
+  const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
     const { duration } = mediaSequence[index];
@@ -20,6 +22,47 @@ const Hero = () => {
     }, duration * 1000);
     return () => clearTimeout(timer);
   }, [index]);
+
+  useEffect(() => {
+    const fullText = t("hero_title") || "";
+    const bufferRef = { text: "" };
+    setTypedText("");
+    setCursorVisible(true);
+
+    let i = 0;
+    let typingDone = false;
+    let typingInterval: number | undefined;
+    let blinkInterval: number | undefined;
+    let stopBlinkTimeout: number | undefined;
+
+    const startTyping = () => {
+      typingInterval = window.setInterval(() => {
+        if (i < fullText.length) {
+          bufferRef.text += fullText.charAt(i);
+          setTypedText(bufferRef.text);
+          i++;
+        } else {
+          clearInterval(typingInterval);
+          typingDone = true;
+
+          stopBlinkTimeout = window.setTimeout(() => {
+            clearInterval(blinkInterval);
+            setCursorVisible(false);
+          }, 1000);
+        }
+      }, 80);
+
+      blinkInterval = window.setInterval(() => {
+        if (!typingDone) setCursorVisible((prev) => !prev);
+      }, 500);
+    };
+    startTyping();
+    return () => {
+      clearInterval(typingInterval);
+      clearInterval(blinkInterval);
+      clearTimeout(stopBlinkTimeout);
+    };
+  }, [i18next.language]);
 
   const current = mediaSequence[index];
 
@@ -55,7 +98,6 @@ const Hero = () => {
           />
         )}
       </AnimatePresence>
-
       <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-transparent pointer-events-none" />
       <motion.div
         initial={{ opacity: 0, y: 30 }}
@@ -65,12 +107,16 @@ const Hero = () => {
       >
         <div className="container mx-auto px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl tracking-wide leading-tight">
-            {t("hero_title")}
+            {typedText}
+            <span
+              className={`inline-block w-[3px] h-[1em] ml-1 bg-white align-middle ${
+                cursorVisible ? "opacity-100" : "opacity-0"
+              } transition-opacity duration-150`}
+            />
           </h1>
           <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
             {t("hero_subtitle")}
           </p>
-
           <motion.a
             href="#services"
             whileHover={{ scale: 1.07 }}
