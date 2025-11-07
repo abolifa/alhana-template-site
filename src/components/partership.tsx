@@ -1,76 +1,94 @@
 "use client";
-
 import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 const Partnership = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
 
   const partners = [
     {
-      img: "/certified/lycca.png",
-      alt: "Libyan Civil Aviation Authority",
-      name: t("partnership.lycca"),
+      id: 1,
+      img: "/partners/1.png",
+      alt: "SCPC Chimie",
+      link: "scpc",
+      name: t("partners.items.scpc.name"),
+      desc: t("partners.items.scpc.desc"),
     },
     {
-      img: "/certified/ministry.png",
-      alt: "Ministry of Tourism",
-      name: t("partnership.ministry"),
+      id: 2,
+      img: "/partners/2.png",
+      alt: "SOFAP",
+      link: "sofap",
+      name: t("partners.items.sofap.name"),
+      desc: t("partners.items.sofap.desc"),
     },
     {
-      img: "/certified/chamber.jpg",
-      alt: "Western Region Tourism Chamber",
-      name: t("partnership.chamber"),
+      id: 3,
+      img: "/partners/3.png",
+      link: "cib",
+      alt: "Cheikhrouhou International Broker’s",
+      name: t("partners.items.cib.name"),
+      desc: t("partners.items.cib.desc"),
     },
     {
-      img: "/certified/insurence.svg",
-      alt: "Global Insurance Company",
-      name: t("partnership.insurance"),
+      id: 4,
+      img: "/partners/4.png",
+      link: "stracau",
+      alt: "STRACAU Valves France",
+      name: t("partners.items.stracau.name"),
+      desc: t("partners.items.stracau.desc"),
     },
   ];
 
   return (
     <section
-      id="certified"
-      className="relative w-full py-24 bg-linear-to-b from-background via-muted/20 to-background overflow-hidden"
+      id="partners"
+      className="relative w-full py-24 bg-linear-to-b from-background via-muted/10 to-background overflow-hidden"
     >
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,193,7,0.1),transparent_60%)] pointer-events-none" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(255,75,0,0.10),transparent_70%)] pointer-events-none" />
 
-      <div className="container mx-auto px-6 text-center relative z-10">
+      <div className="container mx-auto px-4 relative z-10">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
+          transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-amber-500 mb-12"
+          className="text-3xl md:text-5xl leading-relaxed font-extrabold text-center mb-14 bg-linear-to-r from-[#FF4B00] via-orange-500 to-yellow-400 bg-clip-text text-transparent"
         >
-          {t("partnership.title")}
+          {t("partners.title")}
         </motion.h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {partners.map((partner, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {partners.map((p, i) => (
             <motion.div
-              key={index}
+              key={p.id}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{
-                duration: 0.8,
-                delay: 0.2 + index * 0.1,
-                ease: "easeOut",
-              }}
+              transition={{ duration: 0.8, delay: i * 0.1 }}
               viewport={{ once: true }}
-              className="group relative bg-sidebar rounded-2xl border border-border px-6 py-10 flex flex-col items-center justify-center text-center shadow-lg hover:shadow-amber-500/20 transition-all duration-500 hover:-translate-y-2"
+              onClick={() => navigate(`/${p.link}`)}
+              className="cursor-pointer relative group bg-card/50 rounded-3xl border border-border/40 p-8 flex flex-col items-center text-center shadow-md hover:shadow-lg hover:shadow-[#FF4B00]/20 backdrop-blur-sm transition-all hover:-translate-y-2"
             >
-              <div className="w-40 h-40 flex items-center justify-center mb-4 p-3 bg-white rounded-sm">
+              <div className="w-36 h-36 flex items-center justify-center mb-6 bg-white rounded-xl overflow-hidden shadow-inner">
                 <img
-                  src={partner.img}
-                  alt={partner.alt}
-                  className="object-contain w-full h-full transition-transform duration-700 group-hover:scale-110"
+                  src={p.img}
+                  alt={p.alt}
+                  className="object-contain w-28 h-28 group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
-              <h3 className="text-base md:text-lg font-semibold">
-                {partner.name}
-              </h3>
+              <h3 className="text-base font-semibold mb-2">{p.name}</h3>
+              <p className="text-sm text-muted-foreground mb-6 leading-relaxed line-clamp-3">
+                {p.desc}
+              </p>
+              <button
+                onClick={() => navigate(`/partners/${p.id}`)}
+                className="px-6 py-2.5 rounded-full text-sm font-semibold bg-[#FF4B00] text-white hover:bg-[#e54400] transition-transform hover:scale-105 shadow-md"
+              >
+                {t("partners.learn_more")}
+              </button>
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-linear-to-t from-[#FF4B00]/10 to-transparent rounded-3xl transition duration-500 pointer-events-none" />
             </motion.div>
           ))}
         </div>

@@ -1,75 +1,38 @@
 import { motion, AnimatePresence } from "framer-motion";
-import i18next from "i18next";
 import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 
 const mediaSequence = [
-  { type: "image", src: "/hero/libyan-desert.jpg", duration: 10 },
-  { type: "video", src: "/videos/2.mp4", duration: 10 },
+  { type: "image", src: "/images/1.jpg", duration: 10 },
   { type: "video", src: "/videos/1.mp4", duration: 10 },
+  { type: "video", src: "/videos/2.mp4", duration: 10 },
+];
+
+const perks = [
+  { title: "hero.perks.quality" },
+  { title: "hero.perks.reliability" },
+  { title: "hero.perks.innovation" },
+  { title: "hero.perks.partnership" },
 ];
 
 const Hero = () => {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
-  const [typedText, setTypedText] = useState("");
-  const [cursorVisible, setCursorVisible] = useState(true);
 
   useEffect(() => {
-    const { duration } = mediaSequence[index];
-    const timer = setTimeout(() => {
-      setIndex((prev) => (prev + 1) % mediaSequence.length);
-    }, duration * 1000);
+    const timer = setTimeout(
+      () => setIndex((p) => (p + 1) % mediaSequence.length),
+      mediaSequence[index].duration * 1000
+    );
     return () => clearTimeout(timer);
   }, [index]);
-
-  useEffect(() => {
-    const fullText = t("hero_title") || "";
-    const bufferRef = { text: "" };
-    setTypedText("");
-    setCursorVisible(true);
-
-    let i = 0;
-    let typingDone = false;
-    let typingInterval: number | undefined;
-    let blinkInterval: number | undefined;
-    let stopBlinkTimeout: number | undefined;
-
-    const startTyping = () => {
-      typingInterval = window.setInterval(() => {
-        if (i < fullText.length) {
-          bufferRef.text += fullText.charAt(i);
-          setTypedText(bufferRef.text);
-          i++;
-        } else {
-          clearInterval(typingInterval);
-          typingDone = true;
-
-          stopBlinkTimeout = window.setTimeout(() => {
-            clearInterval(blinkInterval);
-            setCursorVisible(false);
-          }, 1000);
-        }
-      }, 80);
-
-      blinkInterval = window.setInterval(() => {
-        if (!typingDone) setCursorVisible((prev) => !prev);
-      }, 500);
-    };
-    startTyping();
-    return () => {
-      clearInterval(typingInterval);
-      clearInterval(blinkInterval);
-      clearTimeout(stopBlinkTimeout);
-    };
-  }, [i18next.language]);
 
   const current = mediaSequence[index];
 
   return (
     <section
       id="hero"
-      className="relative w-full h-[calc(90vh)] flex items-center justify-center overflow-hidden"
+      className="relative w-full h-screen flex items-center justify-center overflow-hidden"
     >
       <AnimatePresence mode="wait">
         {current.type === "image" ? (
@@ -98,43 +61,38 @@ const Hero = () => {
           />
         )}
       </AnimatePresence>
-      <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/40 to-transparent pointer-events-none" />
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1.5, ease: "easeOut" }}
-        className="relative z-10 w-full"
-      >
+
+      <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/70 to-black/40" />
+      <div className="relative z-10 w-full">
         <div className="container mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl tracking-wide leading-tight">
-            {typedText}
-            <span
-              className={`inline-block w-[3px] h-[1em] ml-1 bg-white align-middle ${
-                cursorVisible ? "opacity-100" : "opacity-0"
-              } transition-opacity duration-150`}
-            />
-          </h1>
-          <p className="mt-6 text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            {t("hero_subtitle")}
-          </p>
-          <motion.a
-            href="#services"
-            whileHover={{ scale: 1.07 }}
-            whileTap={{ scale: 0.96 }}
-            className="inline-block mt-10 px-10 py-4 bg-amber-500 text-white font-semibold rounded-full shadow-xl hover:bg-amber-600 transition"
+          <img
+            src="/images/logo-white.png"
+            alt="Logo"
+            className="mx-auto w-56 md:w-64 h-auto object-contain drop-shadow-[0_0_15px_rgba(255,255,255,0.3)] mb-6"
+          />
+          <div className="flex flex-col md:flex-row justify-center items-center  gap-2 mt-6">
+            {perks.map((p, index) => (
+              <>
+                <span key={p.title} className="text-white text-lg font-medium">
+                  {t(p.title)}
+                </span>
+
+                {index < perks.length - 1 && (
+                  <span className="bg-orange-500 h-1.5 w-1.5 rounded-full hidden md:block"></span>
+                )}
+              </>
+            ))}
+          </div>
+
+          <a
+            href="#about"
+            className="inline-block mt-10 px-10 py-4 rounded-full font-semibold text-white shadow-lg bg-[#FF4B00] hover:bg-[#e54400] transition"
           >
-            {t("explore_now")}
-          </motion.a>
+            {t("buttons.explore_now")}
+          </a>
         </div>
-      </motion.div>
-      <motion.div
-        className="absolute inset-0 bg-black/40"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.4 }}
-        transition={{ duration: 1.5, delay: 0.5 }}
-      />
+      </div>
     </section>
   );
 };
-
 export default Hero;

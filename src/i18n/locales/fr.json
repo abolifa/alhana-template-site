@@ -1,0 +1,249 @@
+{
+  "app": {
+    "brand": "Société Holding Aali Al-Majid pour les Services Pétroliers"
+  },
+
+  "nav": {
+    "home": "Accueil",
+    "about": "À propos",
+    "services": "Services",
+    "partners": "Partenaires",
+    "contact": "Contact"
+  },
+
+  "buttons": {
+    "learn_more": "En savoir plus",
+    "explore_now": "Explorer maintenant",
+    "send": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "sent": "Message envoyé ✓",
+    "error": "Erreur ! Réessayez",
+    "subscribe": "S'abonner",
+    "back_home": "Retour à l’accueil"
+  },
+
+  "hero": {
+    "subtitle": "Excellence industrielle. Solutions intégrées. Partenariats de confiance.",
+    "perks": {
+      "quality": "Orienté qualité",
+      "reliability": "Opérations fiables",
+      "innovation": "Innovation et R&D",
+      "partnership": "Partenariats stratégiques"
+    }
+  },
+
+  "about": {
+    "title": "À propos de nous",
+    "p1": "La société holding Aali Al-Majid pour les services pétroliers regroupe des entreprises spécialisées opérant dans les services pétroliers et gaziers, les solutions chimiques, la fourniture industrielle et la médiation internationale.",
+    "p2": "Nous construisons un écosystème industriel intégré offrant des solutions complètes qui soutiennent le développement énergétique et industriel de la région.",
+    "p3": "Des matières premières aux produits chimiques techniques et équipements industriels, notre groupe assure un soutien complet — du concept à la mise en œuvre — selon les normes internationales."
+  },
+
+  "services": {
+    "title": "Nos services",
+    "items": {
+      "oil_gas": {
+        "title": "Services industriels pour le pétrole et le gaz",
+        "desc": "Support opérationnel pour les installations pétrolières et gazières : équipements, logistique et maintenance."
+      },
+      "chemical": {
+        "title": "Solutions chimiques et techniques",
+        "desc": "Produits chimiques industriels et formulations techniques répondant aux exigences de sécurité et de performance."
+      },
+      "industrial_supply": {
+        "title": "Fourniture et équipements industriels",
+        "desc": "Systèmes mécaniques, outils et pièces de rechange pour la construction, la production et la maintenance."
+      },
+      "international_brokerage": {
+        "title": "Médiation internationale et partenariats",
+        "desc": "Mise en relation de partenaires mondiaux et facilitation de la coopération industrielle transfrontalière."
+      },
+      "project_support": {
+        "title": "Soutien intégré aux projets",
+        "desc": "Planification, logistique et exécution du concept à la mise en service complète."
+      },
+      "research_innovation": {
+        "title": "Recherche, innovation et développement",
+        "desc": "Technologies avancées favorisant l’efficacité et la durabilité."
+      }
+    }
+  },
+
+  "partners": {
+    "title": "Nos partenaires stratégiques",
+    "items": {
+      "sofap": {
+        "name": "Société SOFAP",
+        "desc": "Spécialisée dans les minéraux industriels et les poudres de roches tels que le carbonate de calcium, la baryte et la bentonite — utilisés dans le forage pétrolier, les matériaux de construction, les peintures et les plastiques — soutenant les chaînes d’approvisionnement industrielles à l’échelle locale et régionale."
+      },
+      "stracau": {
+        "name": "STRACAU Valves France",
+        "desc": "Partenaire industriel spécialisé dans la fabrication et la fourniture de vannes industrielles haute performance avec plus de 20 ans d’expérience. Ses produits couvrent les secteurs de l’eau, du CVC, de l’énergie, de la chimie et du pétrole et gaz — complétant les solutions techniques précises du groupe pour les grands projets industriels."
+      },
+      "scpc": {
+        "name": "SCPC Chimie",
+        "desc": "Fournit des solutions avancées pour l’approvisionnement en produits chimiques de haute qualité destinés au forage pétrolier, au traitement de l’eau et aux applications industrielles — avec un engagement strict envers les normes de qualité et la sécurité environnementale."
+      },
+      "cib": {
+        "name": "Cheikhrouhou International Broker’s (CIB)",
+        "desc": "Agissant comme la branche commerciale internationale du groupe, offrant un accès direct à des fabricants mondiaux de premier plan tels qu’Emerson (systèmes d’automatisation) et Ingersoll Rand (pompes industrielles) — renforçant la capacité du groupe à fournir des solutions techniques intégrées conformes aux plus hautes normes internationales."
+      }
+    },
+    "learn_more": "En savoir plus"
+  },
+
+  "contact": {
+    "title": "Contactez-nous",
+    "address": "Misurata, Libye",
+    "phone": "+218 91 200 8004",
+    "phone2": "+218 91 311 9741",
+    "email": "info@aalialmajdholding.com.ly",
+    "map_title": "Emplacement de l’entreprise",
+    "form": {
+      "name": "Nom complet",
+      "email": "E-mail",
+      "phone": "Téléphone",
+      "message": "Votre message",
+      "submit": "Envoyer le message",
+      "sending": "Envoi en cours...",
+      "sent": "Message envoyé",
+      "error": "Erreur ! Réessayez"
+    }
+  },
+
+  "footer": {
+    "description": "Société Holding Aali Al-Majid pour les Services Pétroliers",
+    "quick_links": "Liens rapides",
+    "links": {
+      "about": "@nav.about",
+      "services": "@nav.services",
+      "gallery": "Galerie",
+      "contact": "@nav.contact"
+    },
+    "contact_title": "Informations de contact",
+    "address": "Misurata, Libye",
+    "phone": "+218 91 200 8004",
+    "phone2": "+218 91 311 9741",
+    "email": "info@aalialmajdholding.com.ly",
+    "subscribe_title": "Abonnez-vous à notre newsletter",
+    "subscribe_desc": "Soyez le premier informé de nos produits et mises à jour.",
+    "subscribe_placeholder": "Entrez votre e-mail",
+    "subscribe_button": "@buttons.subscribe",
+    "subscribed": "Adresse {{email}} abonnée avec succès !",
+    "copyright": "Société Holding Aali Al-Majid pour les Services Pétroliers — Tous droits réservés."
+  },
+
+  "errors": {
+    "page_not_found": "Page non trouvée",
+    "page_not_found_desc": "Cette page n’existe pas. Vérifiez l’URL ou revenez à l’accueil."
+  },
+
+  "scpc": {
+    "title": "SCPC Chimie",
+    "description": "Fondée en 1988, SCPC Chimie est un pionnier dans la production et la fourniture de minéraux industriels et de produits chimiques destinés aux secteurs du pétrole et du gaz, de la construction et de la fabrication. Grâce à ses installations certifiées ISO, SCPC garantit une qualité constante, la durabilité et une compétitivité mondiale.",
+    "mission_title": "Mission",
+    "mission_desc": "Fournir aux marchés libyen et régional des produits chimiques et minéraux de haute qualité répondant aux normes exigeantes des secteurs pétrolier et industriel, tout en assurant la conformité environnementale et une croissance durable.",
+    "products_title": "Produits principaux",
+    "products": [
+      {
+        "title": "Bicarbonate de sodium",
+        "desc": "Composé alcalin polyvalent utilisé dans les fluides de forage, le contrôle du pH et le traitement des gaz — garantissant la stabilité du système et la prévention de la corrosion."
+      },
+      {
+        "title": "Soude (carbonate de sodium)",
+        "desc": "Carbonate de sodium de haute pureté utilisé pour l’adoucissement de l’eau, le conditionnement des boues de forage et divers procédés chimiques."
+      },
+      {
+        "title": "Dencell CMC HV",
+        "desc": "Carboxyméthylcellulose à haute viscosité utilisée comme modificateur de rhéologie et réducteur de perte de fluide dans les formulations de forage et industrielles à base d’eau."
+      },
+      {
+        "title": "Chlorure de calcium 94 %",
+        "desc": "Qualité anhydre utilisée pour le contrôle de l’humidité, les fluides de forage et les applications de déshydratation — garantissant des performances fiables à haute température."
+      },
+      {
+        "title": "Chlorure de calcium 96 %",
+        "desc": "Chlorure de calcium de haute pureté destiné aux applications pétrolières, industrielles et de dégivrage, offrant une excellente stabilité de la saumure et une efficacité d’hydratation."
+      }
+    ]
+  },
+
+  "sofap": {
+    "title": "Société SOFAP",
+    "description": "SOFAP est un producteur tunisien de premier plan de minéraux industriels et de poudres de roches tels que la baryte, la bentonite et le carbonate de calcium. Forte de plusieurs décennies d’expérience, SOFAP fournit des matières premières de haute qualité pour les secteurs du pétrole et du gaz, de la construction, des peintures et des plastiques — garantissant fiabilité, précision et conformité aux normes internationales.",
+    "mission_title": "Vision et objectif",
+    "mission_desc": "Renforcer les chaînes de valeur industrielles régionales en fournissant des minéraux avancés qui améliorent la performance du forage, la qualité de fabrication et soutiennent une croissance durable dans les secteurs de l’énergie, de la construction et des matériaux.",
+    "products_title": "Produits minéraux clés",
+    "products": [
+      {
+        "title": "Bentonite",
+        "desc": "Argile naturelle dotée de propriétés exceptionnelles de gonflement et de viscosité, idéale pour les boues de forage, le génie civil et les applications d’étanchéité."
+      },
+      {
+        "title": "Baryte (Barite)",
+        "desc": "Minéral à haute densité utilisé comme agent de lestage dans les fluides de forage pétroliers et gaziers, assurant la stabilité du puits et le contrôle de la pression."
+      }
+    ]
+  },
+
+  "stracau": {
+    "title": "STRACAU Valves France",
+    "description": "STRACAU Valves France est un fabricant industriel français spécialisé dans la conception et la production de vannes haute performance pour des applications exigeantes. Avec plus de deux décennies d’expertise, STRACAU fournit des solutions robustes et précises pour les secteurs du pétrole et du gaz, de la pétrochimie, du traitement des eaux, du CVC et de la production d’énergie — garantissant fiabilité, performance et conformité aux normes internationales.",
+    "mission_title": "Mission",
+    "mission_desc": "Fournir des systèmes de vannes innovants et durables adaptés aux besoins industriels, combinant l’excellence de l’ingénierie française, l’assurance qualité et un support technique orienté client pour une exploitation industrielle durable.",
+    "products_title": "Produits principaux",
+    "sectors_title": "Secteurs industriels",
+    "sectors": [
+      {
+        "title": "Pétrole et gaz",
+        "desc": "Vannes en acier forgé et coulé pour les champs pétrolifères, les raffineries et les réseaux de transport de gaz, garantissant sécurité, durabilité et performance."
+      },
+      {
+        "title": "Eau et environnement",
+        "desc": "Vannes et raccords pour le traitement des eaux usées, l’irrigation, le dessalement et les installations de biogaz — conçus pour l’efficacité et la durabilité."
+      },
+      {
+        "title": "Bâtiment / CVC",
+        "desc": "Vannes haute performance pour les réseaux de CVC, de plomberie, de vapeur et d’incendie — assurant une distribution sûre et un contrôle précis du débit."
+      },
+      {
+        "title": "Applications industrielles",
+        "desc": "Gammes de vannes pour la chimie lourde et fine, le ciment, les mines et l’agro-industrie — garantissant un fonctionnement fiable et durable."
+      }
+    ],
+    "products": [
+      { "title": "Vannes à bille" },
+      { "title": "Vannes à guillotine" },
+      { "title": "Vannes à brides" },
+      { "title": "Vannes à soupape et clapet" },
+      { "title": "Vannes papillon" }
+    ]
+  },
+
+  "cib": {
+    "title": "Cheikhrouhou International Broker’s (CIB)",
+    "description": "CIB est une société internationale de représentation commerciale et industrielle reliant les principaux fabricants mondiaux aux marchés d’Afrique du Nord et du Moyen-Orient. En partenariat avec des marques de renommée mondiale telles qu’Emerson, Ingersoll Rand et Wilo, CIB fournit des systèmes d’automatisation avancés, des pompes industrielles, des compresseurs et des solutions d’instrumentation pour les secteurs du pétrole et du gaz, de la fabrication et de l’énergie.",
+    "mission_title": "Mission",
+    "mission_desc": "Relier les industries à des fournisseurs mondiaux de confiance afin de garantir la fourniture d’équipements et de technologies certifiés qui améliorent l’efficacité opérationnelle, la fiabilité et la durabilité dans les secteurs de l’énergie et de l’industrie.",
+    "products_title": "Services principaux",
+    "services_title": "Services principaux",
+    "services": [
+      {
+        "title": "Courtage en équipements industriels",
+        "desc": "Mise en relation des clients régionaux avec des fabricants de premier plan tels qu’Emerson et Ingersoll Rand pour fournir des systèmes d’automatisation avancés et des pompes industrielles."
+      },
+      {
+        "title": "Approvisionnement technique et fourniture",
+        "desc": "Facilitation de l’acquisition de machines spécialisées et de composants conformes aux normes internationales les plus élevées."
+      },
+      {
+        "title": "Solutions industrielles intégrées",
+        "desc": "Fourniture de solutions clés en main intégrant équipements, technologie et logistique pour des opérations industrielles fiables et efficaces."
+      },
+      {
+        "title": "Partenariats internationaux",
+        "desc": "Agit comme passerelle commerciale du groupe vers les partenaires européens et mondiaux dans le cadre de la collaboration avec European ADEX."
+      }
+    ]
+  }
+}

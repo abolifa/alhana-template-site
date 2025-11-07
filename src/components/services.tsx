@@ -1,271 +1,85 @@
-"use client";
 import { motion } from "framer-motion";
-import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import {
-  FaGraduationCap,
-  FaMoneyBillWave,
-  FaPassport,
-  FaTicketAlt,
+  FaIndustry,
+  FaFlask,
+  FaCogs,
+  FaGlobe,
+  FaProjectDiagram,
+  FaLightbulb,
 } from "react-icons/fa";
 
 const Services = () => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
   const { t } = useTranslation();
-
   const services = [
     {
-      title: t("services.visa_assistance.title"),
-      description: t("services.visa_assistance.description"),
-      detailsTitle: t("services.visa_assistance.details_title"),
-      icon: FaPassport,
-      details: [
-        {
-          flag: "/flags/1.webp",
-          name: t("services.visa_assistance.details.0"),
-        },
-        {
-          flag: "/flags/2.webp",
-          name: t("services.visa_assistance.details.1"),
-        },
-        { flag: "/flags/3.png", name: t("services.visa_assistance.details.2") },
-        { flag: "/flags/4.png", name: t("services.visa_assistance.details.3") },
-        { flag: "/flags/5.png", name: t("services.visa_assistance.details.4") },
-        {
-          flag: "/flags/6.webp",
-          name: t("services.visa_assistance.details.5"),
-        },
-        { flag: "/flags/7.png", name: t("services.visa_assistance.details.6") },
-        { flag: "/flags/8.png", name: t("services.visa_assistance.details.7") },
-        {
-          flag: "/flags/11.webp",
-          name: t("services.visa_assistance.details.8"),
-        },
-      ],
+      icon: <FaIndustry className="text-4xl text-orange-500 mb-4" />,
+      title: t("services.items.oil_gas.title"),
+      desc: t("services.items.oil_gas.desc"),
     },
     {
-      title: t("services.flight_booking.title"),
-      description: t("services.flight_booking.description"),
-      icon: FaTicketAlt,
-      detailsTitle: t("services.flight_booking.details_title"),
-      details: [
-        {
-          flag: "/airlines/1.png",
-          name: t("services.flight_booking.details.0"),
-        },
-        {
-          flag: "/airlines/5.png",
-          name: t("services.flight_booking.details.1"),
-        },
-        {
-          flag: "/airlines/6.png",
-          name: t("services.flight_booking.details.2"),
-        },
-        {
-          flag: "/airlines/7.png",
-          name: t("services.flight_booking.details.3"),
-        },
-        {
-          flag: "/airlines/8.jpg",
-          name: t("services.flight_booking.details.4"),
-        },
-        {
-          flag: "/airlines/2.jpg",
-          name: t("services.flight_booking.details.5"),
-        },
-        {
-          flag: "/airlines/3.jpg",
-          name: t("services.flight_booking.details.6"),
-        },
-        {
-          flag: "/airlines/9.png",
-          name: t("services.flight_booking.details.7"),
-        },
-        {
-          flag: "/airlines/10.png",
-          name: t("services.flight_booking.details.8"),
-        },
-        {
-          flag: "/airlines/4.png",
-          name: t("services.flight_booking.details.9"),
-        },
-      ],
+      icon: <FaFlask className="text-4xl text-orange-500 mb-4" />,
+      title: t("services.items.chemical.title"),
+      desc: t("services.items.chemical.desc"),
     },
     {
-      title: t("services.financial_services.title"),
-      description: t("services.financial_services.description"),
-      icon: FaMoneyBillWave,
-      detailsTitle: t("services.financial_services.details_title"),
-      details: [
-        {
-          flag: "/finance/insurance.png",
-          name: t("services.financial_services.details.0"),
-        },
-        {
-          flag: "/finance/exchange.png",
-          name: t("services.financial_services.details.1"),
-        },
-      ],
+      icon: <FaCogs className="text-4xl text-orange-500 mb-4" />,
+      title: t("services.items.industrial_supply.title"),
+      desc: t("services.items.industrial_supply.desc"),
     },
     {
-      title: t("services.study_programs.title"),
-      description: t("services.study_programs.description"),
-      icon: FaGraduationCap,
-      detailsTitle: t("services.study_programs.details_title"),
-      details: [
-        {
-          flag: "/study/globe.jpg",
-          name: t("services.study_programs.details.0"),
-        },
-        {
-          flag: "/study/globe.jpg",
-          name: t("services.study_programs.details.1"),
-        },
-        {
-          flag: "/study/globe.jpg",
-          name: t("services.study_programs.details.2"),
-        },
-        {
-          flag: "/study/globe.jpg",
-          name: t("services.study_programs.details.3"),
-        },
-      ],
+      icon: <FaGlobe className="text-4xl text-orange-500 mb-4" />,
+      title: t("services.items.international_brokerage.title"),
+      desc: t("services.items.international_brokerage.desc"),
+    },
+    {
+      icon: <FaProjectDiagram className="text-4xl text-orange-500 mb-4" />,
+      title: t("services.items.project_support.title"),
+      desc: t("services.items.project_support.desc"),
+    },
+    {
+      icon: <FaLightbulb className="text-4xl text-orange-500 mb-4" />,
+      title: t("services.items.research_innovation.title"),
+      desc: t("services.items.research_innovation.desc"),
     },
   ];
 
   return (
     <section
       id="services"
-      className="relative -mt-24 z-20 w-full flex flex-col items-center"
+      className="relative w-full py-24 bg-linear-to-b from-background via-muted/10 to-background overflow-hidden"
     >
-      <div className="container mx-auto px-5">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={{
-            hidden: { opacity: 0, y: 100 },
-            visible: {
-              opacity: 1,
-              y: 0,
-              transition: { staggerChildren: 0.2, delayChildren: 0.6 },
-            },
-          }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,75,0,0.10),transparent_65%)] pointer-events-none" />
+      <div className="container mx-auto px-6 text-center relative z-10">
+        <motion.h2
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-3xl md:text-5xl font-bold text-orange-500 mb-12"
         >
-          {services.map((service, index) => (
-            <motion.div key={index} layout>
-              {/* Card */}
-              <div
-                onClick={() =>
-                  setActiveIndex(activeIndex === index ? null : index)
-                }
-                className={`cursor-pointer bg-sidebar border border-border rounded-2xl p-8 text-center shadow-xl transition-all hover:shadow-2xl ${
-                  activeIndex === index ? "ring-2 ring-amber-500" : ""
-                }`}
-              >
-                <service.icon className="text-5xl text-amber-500 mb-4 mx-auto" />
-                <h3 className="text-2xl font-semibold text-foreground">
-                  {service.title}
-                </h3>
-                <p className="mt-3 text-muted-foreground">
-                  {service.description}
-                </p>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  className="mt-6 px-6 py-2 bg-amber-500 text-white font-medium rounded-full hover:bg-amber-600 transition"
-                >
-                  {activeIndex === index
-                    ? t("services.hide_details")
-                    : t("services.view_more")}
-                </motion.button>
-              </div>
-
-              {/* Mobile detail block */}
-              <div className="block lg:hidden">
-                {activeIndex === index && (
-                  <motion.div
-                    key={`details-${index}`}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-full mt-4 bg-muted/10 border border-border rounded-2xl p-6 shadow-inner"
-                  >
-                    <h4 className="text-xl font-bold text-amber-500 mb-4 text-center">
-                      {service.detailsTitle}
-                    </h4>
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      {service.details.map((item, i) => (
-                        <motion.div
-                          key={i}
-                          initial={{ opacity: 0, y: 10 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{ delay: i * 0.05 }}
-                          className="flex flex-col items-center justify-center bg-background border border-border rounded-xl p-3 hover:bg-muted/30 transition"
-                        >
-                          <img
-                            src={item.flag}
-                            alt={item.name}
-                            className="object-contain w-20 h-20"
-                          />
-                          <span className="mt-2 text-sm font-medium text-foreground">
-                            {item.name}
-                          </span>
-                        </motion.div>
-                      ))}
-                    </div>
-                  </motion.div>
-                )}
-              </div>
+          {t("services.title")}
+        </motion.h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+          {services.map((s, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 + i * 0.05 }}
+              viewport={{ once: true }}
+              className="grou relative rounded-2xl border border-border p-8 text-center shadow-lg hover:shadow-orange-500/20 transition-all"
+            >
+              <div className="flex justify-center">{s.icon}</div>
+              <h3 className="text-lg font-semibold mb-3">{s.title}</h3>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {s.desc}
+              </p>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Desktop persistent area */}
-        <motion.div
-          layout
-          className="hidden lg:block overflow-hidden transition-all"
-          animate={{
-            height: activeIndex !== null ? "auto" : 0,
-            opacity: activeIndex !== null ? 1 : 0,
-          }}
-          transition={{ duration: 0.5, ease: "easeInOut" }}
-        >
-          {activeIndex !== null && (
-            <motion.div
-              key={`details-desktop-${activeIndex}`}
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="mt-10 bg-muted/10 border border-border rounded-2xl p-8 shadow-inner"
-            >
-              <h4 className="text-2xl font-bold text-amber-500 mb-6 text-center">
-                {services[activeIndex].detailsTitle}
-              </h4>
-              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6">
-                {services[activeIndex].details.map((item, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: i * 0.05, duration: 0.3 }}
-                    className="flex flex-col items-center justify-center bg-background border border-border rounded-xl p-4 hover:bg-muted/30 transition"
-                  >
-                    <img
-                      src={item.flag}
-                      alt={item.name}
-                      className="object-contain w-full h-20"
-                    />
-                    <span className="mt-3 text-sm text-foreground font-medium">
-                      {item.name}
-                    </span>
-                  </motion.div>
-                ))}
-              </div>
-            </motion.div>
-          )}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
 };
-
 export default Services;

@@ -1,72 +1,104 @@
 {
-  "hero_title": "Alhana Palace for Tourism & Financial Investment.",
-  "hero_subtitle": "Discover the world with us. Unforgettable journeys, exceptional service.",
-  "explore_now": "Explore Now",
-  "services": {
-    "view_more": "View More",
-    "hide_details": "Hide Details",
-    "visa_assistance": {
-      "title": "Visa Assistance",
-      "description": "Comprehensive support for obtaining travel visas.",
-      "details_title": "Our Visa Services",
-      "details": [
-        "European Schengen Visas",
-        "Gulf Cooperation Council",
-        "Middle East & North Africa",
-        "Asia & Far East",
-        "North America",
-        "United Kingdom",
-        "Africa",
-        "Latin America",
-        "Libyan Visa & Residency"
-      ]
-    },
+  "app": {
+    "brand": "Aali Al-Majid Oil Services Holding Co."
+  },
 
-    "flight_booking": {
-      "title": "Flight Booking",
-      "description": "Affordable and convenient flight options worldwide.",
-      "details_title": "Our Partner Airlines",
-      "details": [
-        "Afriqiyah Airways",
-        "Libyan Airlines",
-        "Libyan Wings",
-        "Berniq Airways",
-        "Crown Airlines",
-        "Buraq Air",
-        "Egypt Air",
-        "Tunis Air",
-        "Turkish Airlines",
-        "Air Libya"
-      ]
-    },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "partners": "Partners",
+    "contact": "Contact"
+  },
 
-    "financial_services": {
-      "title": "Financial Services",
-      "description": "Currency exchange and travel insurance solutions.",
-      "details_title": "Our Financial Solutions",
-      "details": ["Travel Insurance", "Currency Exchange"]
-    },
+  "buttons": {
+    "learn_more": "Learn More",
+    "explore_now": "Explore Now",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "sent": "Message Sent ✓",
+    "error": "Error! Try Again",
+    "subscribe": "Subscribe",
+    "back_home": "Back to Home"
+  },
 
-    "study_programs": {
-      "title": "Study Programs",
-      "description": "Comprehensive guidance for international studies.",
-      "details_title": "Available Programs",
-      "details": [
-        "Language Diplomas",
-        "Bachelor's Programs",
-        "Master's Programs",
-        "PhD Programs"
-      ]
+  "hero": {
+    "subtitle": "Industrial excellence. Integrated solutions. Trusted partnerships.",
+    "perks": {
+      "quality": "Quality-Driven",
+      "reliability": "Reliable Operations",
+      "innovation": "Innovation & R&D",
+      "partnership": "Strategic Partnerships"
     }
   },
+
+  "about": {
+    "title": "About Us",
+    "p1": "Aali Al-Majid Oil Services Holding Company unifies specialized companies operating across oil & gas services, chemical solutions, industrial supply, and international brokerage.",
+    "p2": "We build an integrated industrial ecosystem delivering comprehensive solutions that support energy and industrial development in the region.",
+    "p3": "From raw materials to technical chemicals and industrial equipment, our group provides end-to-end support — from concept to execution — at global standards."
+  },
+
+  "services": {
+    "title": "Our Services",
+    "items": {
+      "oil_gas": {
+        "title": "Oil & Gas Industrial Services",
+        "desc": "Operational support for oil & gas facilities: equipment, logistics, maintenance."
+      },
+      "chemical": {
+        "title": "Chemical & Technical Solutions",
+        "desc": "Industrial chemicals and technical formulations meeting safety and performance."
+      },
+      "industrial_supply": {
+        "title": "Industrial Supply & Equipment",
+        "desc": "Mechanical systems, tools, and spares for construction, production, and MRO."
+      },
+      "international_brokerage": {
+        "title": "International Brokerage & Partnerships",
+        "desc": "Global partner sourcing and cross-border industrial collaboration."
+      },
+      "project_support": {
+        "title": "Integrated Project Support",
+        "desc": "Planning, logistics, and implementation from concept to commissioning."
+      },
+      "research_innovation": {
+        "title": "Research, Innovation & Development",
+        "desc": "Advanced technologies that drive efficiency and sustainability."
+      }
+    }
+  },
+
+  "partners": {
+    "title": "Our Strategic Partners",
+    "items": {
+      "sofap": {
+        "name": "SOFAP Company",
+        "desc": "Specialized in industrial minerals and rock powders such as calcium carbonate, barite and bentonite—used in oil-well drilling, construction materials, paints and plastics—supporting industrial supply chains locally and regionally."
+      },
+      "stracau": {
+        "name": "STRACAU Valves France",
+        "desc": "Industrial partner specialized in manufacturing and supplying high-performance industrial valves with over 20 years of experience. Its products cover sectors including water, HVAC, energy, chemicals and oil & gas—complementing the group’s precision technical solutions for major industrial projects."
+      },
+      "scpc": {
+        "name": "SCPC Chimie",
+        "desc": "Provides advanced solutions in supplying high-quality chemicals for oil-well drilling, water treatment and industrial applications—with strict adherence to quality standards and environmental safety."
+      },
+      "cib": {
+        "name": "Cheikhrouhou International Broker’s (CIB)",
+        "desc": "Acting as the group’s international commercial arm, offering direct access to leading global manufacturers such as Emerson in automation systems and Ingersoll Rand in industrial pumps—enhancing the group’s ability to deliver integrated technical solutions that meet the highest global specifications."
+      }
+    },
+    "learn_more": "Learn More"
+  },
+
   "contact": {
     "title": "Contact Us",
-    "company_name": "Alhana Palace for Tourism & Financial Investment",
-    "address": "Al Dahra, Sidi Ben Imam Street, behind the Italian Embassy",
-    "phone": "+218 92 681 1102",
-    "email": "info@alhana.com.ly",
-    "map_title": "Alhana Location",
-
+    "address": "Misurata, Libya",
+    "phone": "+218 91 200 8004",
+    "phone2": "+218 91 311 9741",
+    "email": "info@aalialmajdholding.com.ly",
+    "map_title": "Company Location",
     "form": {
       "name": "Full Name",
       "email": "Email",
@@ -74,48 +106,154 @@
       "message": "Your Message",
       "submit": "Send Message",
       "sending": "Sending...",
-      "sent": "Message Sent ✓",
+      "sent": "Message Sent",
       "error": "Error! Try Again"
     }
   },
-  "partnership": {
-    "title": "Accredited By",
-    "lycca": "Libyan Civil Aviation Authority",
-    "ministry": "Ministry of Tourism",
-    "chamber": "Western Region Tourism Chamber",
-    "insurance": "Global Insurance Company"
-  },
+
   "footer": {
-    "description": "Alhana Palace for Tourism & Financial Investment.",
+    "description": "Aali Al-Majid Oil Services Holding Co.",
     "quick_links": "Quick Links",
     "links": {
-      "about": "About Us",
-      "services": "Services",
+      "about": "@nav.about",
+      "services": "@nav.services",
       "gallery": "Gallery",
-      "contact": "Contact"
+      "contact": "@nav.contact"
     },
     "contact_title": "Contact Info",
-    "address": "Al Dahra, Sidi Ben Imam Street, behind the Italian Embassy",
-    "phone": "+218 92 681 1102",
-    "email": "info@alhana.com.ly",
+    "address": "Misurata, Libya",
+    "phone": "+218 91 200 8004",
+    "phone2": "+218 91 311 9741",
+    "email": "info@aalialmajdholding.com.ly",
     "subscribe_title": "Subscribe to our Newsletter",
-    "subscribe_desc": "Be the first to know about our offers and products.",
+    "subscribe_desc": "Be the first to know about our products and updates.",
     "subscribe_placeholder": "Enter your email",
-    "subscribe_button": "Subscribe",
+    "subscribe_button": "@buttons.subscribe",
     "subscribed": "Email {{email}} subscribed successfully!",
-    "copyright": "Alhana Palace for Tourism & Financial Investment — All Rights Reserved."
+    "copyright": "Aali Al-Majid Oil Services Holding Co. — All Rights Reserved."
   },
-  "about_us": "About Us",
-  "about_description": "We are Alhana Palace for Tourism and Financial Investment, aspecialized company in organizing tourism trips and providing comprehensive investment services within the tourism sector. Ourgoal is to deliver exceptional travel experiences that combine comfort, luxury, and precision in execution. We believe that every journey should become an unforgettable memory — which is why we meticulously design our travel programs to meet our clients’ expectations and cater to the finest details.",
-  "learn_more": "Learn More",
-  "years_of_experience": "Years of Experience",
-  "global_partners": "Global Partners",
-  "satisfied_clients": "Satisfied Clients",
-  "destinations": "Destinations",
-  "our_gallery": "Our Gallery",
-  "home_nav": "Home",
-  "about_nav": "About Us",
-  "services_nav": "Services",
-  "blog_nav": "Blog",
-  "contact_nav": "Contact"
+
+  "errors": {
+    "page_not_found": "Page not found",
+    "page_not_found_desc": "This page doesn’t exist. Check the URL or return home."
+  },
+
+  "scpc": {
+    "title": "SCPC Chimie",
+    "description": "Founded in 1988, SCPC Chimie is a pioneer in the production and supply of industrial minerals and chemical products serving oil & gas, construction, and manufacturing industries. Through its ISO-certified facilities, SCPC ensures consistent quality, sustainability, and global competitiveness.",
+    "mission_title": "Mission",
+    "mission_desc": "To supply the Libyan and regional markets with high-quality chemical and mineral products that meet the demanding standards of the oilfield and industrial sectors, ensuring environmental compliance and sustainable growth.",
+    "products_title": "Main Products",
+    "products": [
+      {
+        "title": "Sodium Bicarbonate",
+        "desc": "Versatile alkaline compound used in drilling fluids, pH control, and gas treatment — ensuring system stability and corrosion prevention."
+      },
+      {
+        "title": "Soda Ash",
+        "desc": "High-purity sodium carbonate employed in water softening, drilling mud conditioning, and various chemical manufacturing processes."
+      },
+      {
+        "title": "Dencell CMC HV",
+        "desc": "High-viscosity Carboxymethyl Cellulose used as a rheology modifier and fluid-loss reducer in water-based drilling and industrial formulations."
+      },
+      {
+        "title": "Calcium Chloride 94%",
+        "desc": "Anhydrous grade used for moisture control, drilling fluids, and desiccant applications — ensuring reliable performance under high temperatures."
+      },
+      {
+        "title": "Calcium Chloride 96%",
+        "desc": "High-purity calcium chloride for oilfield, industrial, and de-icing applications, offering superior brine stability and hydration efficiency."
+      }
+    ]
+  },
+
+  "sofap": {
+    "title": "SOFAP Company",
+    "description": "SOFAP Company is a leading Tunisian producer of industrial minerals and rock powders such as barite, bentonite, and calcium carbonate. With decades of experience, SOFAP provides high-quality raw materials for the oil & gas, construction, paint, and plastics industries — ensuring reliability, precision grading, and compliance with international standards.",
+    "mission_title": "Vision & Purpose",
+    "mission_desc": "To strengthen regional industrial value-chains by supplying advanced mineral inputs that enhance drilling performance, improve manufacturing quality, and support sustainable growth across energy, construction, and materials-processing sectors.",
+    "products_title": "Key Mineral Products",
+    "products": [
+      {
+        "title": "Bentonite",
+        "desc": "Natural clay with exceptional swelling and viscosity properties, ideal for drilling muds, civil engineering, and sealing applications."
+      },
+      {
+        "title": "Barite (Baryte)",
+        "desc": "High-density mineral used as a weighting agent in oil and gas drilling fluids, ensuring wellbore stability and pressure control."
+      }
+    ]
+  },
+
+  "stracau": {
+    "title": "STRACAU Valves France",
+    "description": "STRACAU Valves France is a French industrial manufacturer specialized in designing and producing high-performance valves for demanding applications. With more than two decades of engineering expertise, STRACAU supplies robust and precise solutions for sectors including oil & gas, petrochemicals, water treatment, HVAC, and power generation — ensuring reliability, performance, and compliance with international standards.",
+    "mission_title": "Mission",
+    "mission_desc": "To deliver innovative and durable valve systems tailored to industrial needs, combining French engineering excellence, quality assurance, and customer-focused technical support for sustainable industrial operations.",
+    "products_title": "Main Products",
+    "sectors_title": "Industrial Sectors",
+    "sectors": [
+      {
+        "title": "Oil & Gas",
+        "desc": "Forged and cast steel valves for oilfield, refinery, and gas transmission networks ensuring safety, durability, and performance."
+      },
+      {
+        "title": "Water & Environment",
+        "desc": "Valves and fittings for wastewater treatment, irrigation, desalination, and biogas installations — built for efficiency and sustainability."
+      },
+      {
+        "title": "Building / HVAC",
+        "desc": "High-performance valves for HVAC, plumbing, steam, and fire networks — ensuring safe distribution and precise flow control."
+      },
+      {
+        "title": "Industrial Applications",
+        "desc": "Heavy and fine chemistry, cement, mining, and agro-industry valve ranges for reliable and long-term industrial operation."
+      }
+    ],
+    "products": [
+      {
+        "title": "Ball Valves"
+      },
+      {
+        "title": "Gate Valves"
+      },
+      {
+        "title": "Flanged Valves"
+      },
+      {
+        "title": "Globe & Check Valves"
+      },
+      {
+        "title": "Butterfly Valves"
+      }
+    ]
+  },
+
+  "cib": {
+    "title": "Cheikhrouhou International Broker’s (CIB)",
+    "description": "CIB is an international trading and industrial representation company that bridges leading global manufacturers with North African and Middle Eastern markets. Partnering with world-class brands such as Emerson, Ingersoll Rand, and Wilo, CIB provides access to advanced automation systems, industrial pumps, compressors, and instrumentation solutions tailored for oil & gas, manufacturing, and energy sectors.",
+    "mission_title": "Mission",
+    "mission_desc": "To connect industries with trusted global suppliers, ensuring the delivery of certified equipment and technologies that enhance operational efficiency, reliability, and sustainability across the energy and industrial sectors.",
+    "products_title": "Core Services",
+    "services_title": "Main Services",
+    "services": [
+      {
+        "title": "Industrial Equipment Brokerage",
+        "desc": "Connecting regional clients with top-tier manufacturers such as Emerson and Ingersoll Rand to provide advanced automation systems and industrial pumps."
+      },
+      {
+        "title": "Technical Procurement & Supply",
+        "desc": "Facilitating procurement of specialized machinery and components that meet the highest international specifications and engineering standards."
+      },
+      {
+        "title": "Integrated Industrial Solutions",
+        "desc": "Delivering turnkey solutions that integrate equipment, technology, and logistics to ensure reliable and efficient industrial operations."
+      },
+      {
+        "title": "International Partnerships",
+        "desc": "Acting as the group’s commercial bridge to European and global partners under the collaboration with European ADEX."
+      }
+    ]
+  }
 }

@@ -72,3 +72,4 @@ export default defineConfig([
 ])
 ```
 # alhana-template-site
+# aali-almajd-holding-site

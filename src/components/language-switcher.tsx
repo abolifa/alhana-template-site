@@ -51,6 +51,10 @@ export function LanguageToggle() {
           <span>🇸🇦</span>
           <span>العربية</span>
         </DropdownMenuItem>
+        <DropdownMenuItem onClick={() => changeLanguage("fr")}>
+          <span>🇫🇷</span>
+          <span>Français</span>
+        </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

@@ -4,16 +4,16 @@ import "@/index.css";
 import App from "@/App.tsx";
 import "@/i18n";
 import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider } from "@/providers/theme-provider.tsx";
 import { Toaster } from "./components/ui/sonner";
+import { ThemeProvider } from "./providers/app-provider";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <BrowserRouter>
         <App />
-      </ThemeProvider>
-      <Toaster />
-    </BrowserRouter>
+        <Toaster />
+      </BrowserRouter>
+    </ThemeProvider>
   </StrictMode>
 );
